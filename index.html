@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>108 — Websites Built for Your Next Move</title>
+  <meta name="description" content="108 is a freelance web development service creating fast, modern, responsive websites for businesses, startups, and individuals." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%230a0e1a' width='32' height='32' rx='6'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='16' fill='%2300e5ff'%3E108%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo" aria-label="108 — Home">
+        <svg class="logo-svg" viewBox="0 0 120 40" aria-hidden="true">
+          <defs>
+            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00e5ff" />
+              <stop offset="100%" stop-color="#00b8d4" />
+            </linearGradient>
+            <filter id="logo-glow">
+              <feGaussianBlur stdDeviation="2" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          <text x="60" y="32" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="36" fill="url(#logo-grad)" filter="url(#logo-glow)">108</text>
+        </svg>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#work" class="nav-link">Work</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="btn btn-primary header-cta">Start a project</a>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== MOBILE NAV OVERLAY ========== -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+    <nav aria-label="Mobile navigation">
+      <ul class="mobile-nav-list">
+        <li><a href="#services" class="mobile-nav-link">Services</a></li>
+        <li><a href="#work" class="mobile-nav-link">Work</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        <li><a href="#contact" class="btn btn-primary mobile-cta">Start a project</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-effects">
+        <div class="hero-orb hero-orb--cyan"></div>
+        <div class="hero-orb hero-orb--orange"></div>
+        <div class="hero-grid-overlay"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-logo-display" aria-hidden="true">
+          <svg class="hero-logo-svg" viewBox="0 0 280 100">
+            <defs>
+              <linearGradient id="hero-logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00e5ff" />
+                <stop offset="50%" stop-color="#00b8d4" />
+                <stop offset="100%" stop-color="#00e5ff" />
+              </linearGradient>
+              <filter id="hero-glow">
+                <feGaussianBlur stdDeviation="4" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <text x="140" y="80" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="90" fill="url(#hero-logo-grad)" filter="url(#hero-glow)">108</text>
+            <!-- Orange cursor accent -->
+            <rect x="232" y="20" width="4" height="60" rx="2" fill="#ff6d00" opacity="0.9">
+              <animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.2s" repeatCount="indefinite" />
+            </rect>
+          </svg>
+        </div>
+        <h1 class="hero-headline">Websites built for your next move.</h1>
+        <p class="hero-intro">We create fast, modern, responsive websites for businesses, startups, and individuals — helping you establish a strong online presence with clean design and practical solutions.</p>
+        <p class="hero-slogan">Need a website in a hurry? Call 108. We'll build it.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary btn-lg">Start a project</a>
+          <a href="#services" class="btn btn-outline btn-lg">Explore services</a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What we do</span>
+          <h2 class="section-title">Services</h2>
+          <p class="section-subtitle">From concept to code — we build websites that work for you.</p>
+        </div>
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card" id="service-business">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="10" width="36" height="28" rx="3" />
+                <line x1="6" y1="18" x2="42" y2="18" />
+                <circle cx="14" cy="14" r="1.5" fill="currentColor" stroke="none" />
+                <circle cx="20" cy="14" r="1.5" fill="currentColor" stroke="none" />
+                <circle cx="26" cy="14" r="1.5" fill="currentColor" stroke="none" />
+                <rect x="12" y="24" width="24" height="3" rx="1.5" opacity="0.5" />
+                <rect x="12" y="31" width="16" height="3" rx="1.5" opacity="0.3" />
+              </svg>
+            </div>
+            <h3 class="service-title">Business Websites</h3>
+            <p class="service-desc">Professional websites designed to represent your brand online. We focus on clear messaging, intuitive navigation, and responsive layouts that look great on every device.</p>
+          </div>
+          <!-- Service 2 -->
+          <div class="service-card" id="service-portfolio">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="8" width="14" height="14" rx="2" />
+                <rect x="26" y="8" width="14" height="14" rx="2" />
+                <rect x="8" y="26" width="14" height="14" rx="2" />
+                <rect x="26" y="26" width="14" height="14" rx="2" />
+              </svg>
+            </div>
+            <h3 class="service-title">Portfolio Websites</h3>
+            <p class="service-desc">Showcase your work with a clean, visually compelling portfolio. We build sites that let your projects speak for themselves through thoughtful layout and smooth interactions.</p>
+          </div>
+          <!-- Service 3 -->
+          <div class="service-card" id="service-landing">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 6 L42 18 L42 38 L6 38 L6 18 Z" />
+                <rect x="18" y="26" width="12" height="12" rx="1" />
+                <line x1="24" y1="6" x2="24" y2="18" opacity="0.3" />
+              </svg>
+            </div>
+            <h3 class="service-title">Landing Pages</h3>
+            <p class="service-desc">Focused, single-page designs built to communicate a clear message. Ideal for product launches, campaigns, or any scenario where you need a strong first impression.</p>
+          </div>
+          <!-- Service 4 -->
+          <div class="service-card" id="service-custom">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16,14 8,24 16,34" />
+                <polyline points="32,14 40,24 32,34" />
+                <line x1="28" y1="10" x2="20" y2="38" />
+              </svg>
+            </div>
+            <h3 class="service-title">Custom Web Development</h3>
+            <p class="service-desc">Tailored solutions for unique requirements. Whether you need interactive features, integrations, or a fully custom build, we write clean, maintainable code to bring your vision to life.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WORK ========== -->
+    <section class="section work" id="work">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Selected Work</h2>
+          <p class="section-subtitle">A showcase of recent projects — from business sites to custom web apps.</p>
+        </div>
+        <div class="work-grid">
+
+          <!-- Project 1 — Bloom Roasters -->
+          <article class="project-card" id="project-1">
+            <div class="project-preview">
+              <div class="project-placeholder-visual">
+                <svg viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Background -->
+                  <rect width="400" height="260" rx="8" fill="#0b1120"/>
+                  <!-- Nav bar -->
+                  <rect x="16" y="14" width="368" height="28" rx="6" fill="#101b30"/>
+                  <circle cx="30" cy="28" r="6" fill="#ff6d00" opacity="0.5"/>
+                  <rect x="42" y="24" width="44" height="8" rx="2" fill="#ff6d00" opacity="0.35"/>
+                  <rect x="260" y="22" width="30" height="10" rx="3" fill="#1a2744"/>
+                  <rect x="296" y="22" width="30" height="10" rx="3" fill="#1a2744"/>
+                  <rect x="332" y="22" width="44" height="12" rx="6" fill="#00e5ff" opacity="0.2"/>
+                  <text x="354" y="32" font-family="sans-serif" font-size="7" fill="#00e5ff" text-anchor="middle" opacity="0.8">Order</text>
+                  <!-- Hero image area -->
+                  <rect x="16" y="50" width="220" height="120" rx="6" fill="#131d35"/>
+                  <!-- Coffee cup icon -->
+                  <path d="M100 85 Q100 75 110 75 L130 75 Q140 75 140 85 L140 110 Q140 120 130 120 L110 120 Q100 120 100 110 Z" fill="#1a2744" stroke="#ff6d00" stroke-width="1" opacity="0.6"/>
+                  <path d="M140 90 Q155 90 155 100 Q155 110 140 110" fill="none" stroke="#ff6d00" stroke-width="1" opacity="0.4"/>
+                  <!-- Steam lines -->
+                  <path d="M112 72 Q114 65 112 58" fill="none" stroke="#00e5ff" stroke-width="0.8" opacity="0.3"/>
+                  <path d="M120 70 Q122 62 120 55" fill="none" stroke="#00e5ff" stroke-width="0.8" opacity="0.4"/>
+                  <path d="M128 72 Q130 65 128 58" fill="none" stroke="#00e5ff" stroke-width="0.8" opacity="0.3"/>
+                  <!-- Text block -->
+                  <rect x="248" y="56" width="136" height="14" rx="3" fill="#1a2744"/>
+                  <rect x="248" y="78" width="136" height="8" rx="2" fill="#0f1a30"/>
+                  <rect x="248" y="92" width="110" height="8" rx="2" fill="#0f1a30"/>
+                  <rect x="248" y="106" width="80" height="8" rx="2" fill="#0f1a30"/>
+                  <rect x="248" y="126" width="70" height="24" rx="12" fill="#ff6d00" opacity="0.2"/>
+                  <text x="283" y="142" font-family="sans-serif" font-size="8" fill="#ff6d00" text-anchor="middle">View Menu</text>
+                  <!-- Menu cards -->
+                  <rect x="16" y="180" width="88" height="66" rx="6" fill="#131d35"/>
+                  <rect x="26" y="190" width="68" height="30" rx="4" fill="#1a2744"/>
+                  <rect x="26" y="228" width="50" height="6" rx="2" fill="#0f1a30"/>
+                  <rect x="26" y="238" width="30" height="4" rx="2" fill="#ff6d00" opacity="0.2"/>
+
+                  <rect x="112" y="180" width="88" height="66" rx="6" fill="#131d35"/>
+                  <rect x="122" y="190" width="68" height="30" rx="4" fill="#1a2744"/>
+                  <rect x="122" y="228" width="50" height="6" rx="2" fill="#0f1a30"/>
+                  <rect x="122" y="238" width="30" height="4" rx="2" fill="#ff6d00" opacity="0.2"/>
+
+                  <rect x="208" y="180" width="88" height="66" rx="6" fill="#131d35"/>
+                  <rect x="218" y="190" width="68" height="30" rx="4" fill="#1a2744"/>
+                  <rect x="218" y="228" width="50" height="6" rx="2" fill="#0f1a30"/>
+                  <rect x="218" y="238" width="30" height="4" rx="2" fill="#ff6d00" opacity="0.2"/>
+
+                  <rect x="304" y="180" width="80" height="66" rx="6" fill="#131d35"/>
+                  <rect x="314" y="190" width="60" height="30" rx="4" fill="#1a2744"/>
+                  <rect x="314" y="228" width="44" height="6" rx="2" fill="#0f1a30"/>
+                  <rect x="314" y="238" width="26" height="4" rx="2" fill="#ff6d00" opacity="0.2"/>
+                </svg>
+              </div>
+              <div class="project-overlay">
+                <span class="project-overlay-text">View Project</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Bloom Roasters</h3>
+              <p class="project-type">Business Website</p>
+              <p class="project-desc">A modern website for a specialty coffee roastery featuring an online menu, store locator, and subscription sign-up — built with a warm, inviting design that reflects the brand.</p>
+              <div class="project-tags">
+                <span class="project-tag">HTML / CSS</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Responsive</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 — Velta Fitness -->
+          <article class="project-card" id="project-2">
+            <div class="project-preview">
+              <div class="project-placeholder-visual">
+                <svg viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Background -->
+                  <rect width="400" height="260" rx="8" fill="#0b1120"/>
+                  <!-- Full-width hero -->
+                  <rect x="16" y="14" width="368" height="145" rx="6" fill="#101b30"/>
+                  <!-- Gradient overlay -->
+                  <rect x="16" y="14" width="368" height="145" rx="6" fill="url(#veltaGrad)" opacity="0.4"/>
+                  <defs>
+                    <linearGradient id="veltaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.2"/>
+                      <stop offset="100%" stop-color="#ff6d00" stop-opacity="0.15"/>
+                    </linearGradient>
+                  </defs>
+                  <!-- Hero text -->
+                  <rect x="36" y="40" width="160" height="16" rx="3" fill="#e8ecf4" opacity="0.15"/>
+                  <rect x="36" y="64" width="220" height="10" rx="2" fill="#e8ecf4" opacity="0.07"/>
+                  <rect x="36" y="80" width="180" height="10" rx="2" fill="#e8ecf4" opacity="0.05"/>
+                  <!-- CTA buttons -->
+                  <rect x="36" y="104" width="90" height="28" rx="14" fill="#00e5ff" opacity="0.25"/>
+                  <text x="81" y="122" font-family="sans-serif" font-size="8" fill="#00e5ff" text-anchor="middle">Get Started</text>
+                  <rect x="136" y="104" width="80" height="28" rx="14" fill="none" stroke="#e8ecf4" stroke-width="0.8" opacity="0.2"/>
+                  <text x="176" y="122" font-family="sans-serif" font-size="8" fill="#e8ecf4" text-anchor="middle" opacity="0.4">Learn More</text>
+                  <!-- Fitness icon -->
+                  <circle cx="330" cy="80" r="35" fill="none" stroke="#00e5ff" stroke-width="0.8" opacity="0.2"/>
+                  <circle cx="330" cy="80" r="22" fill="none" stroke="#00e5ff" stroke-width="0.5" opacity="0.15"/>
+                  <!-- Dumbbell -->
+                  <line x1="315" y1="80" x2="345" y2="80" stroke="#00e5ff" stroke-width="2" opacity="0.5"/>
+                  <rect x="312" y="74" width="8" height="12" rx="2" fill="#00e5ff" opacity="0.3"/>
+                  <rect x="340" y="74" width="8" height="12" rx="2" fill="#00e5ff" opacity="0.3"/>
+                  <!-- Stats section -->
+                  <rect x="16" y="170" width="116" height="76" rx="6" fill="#131d35"/>
+                  <text x="74" y="198" font-family="sans-serif" font-size="20" fill="#00e5ff" text-anchor="middle" font-weight="bold" opacity="0.7">500+</text>
+                  <rect x="44" y="210" width="60" height="6" rx="2" fill="#0f1a30"/>
+                  <rect x="52" y="222" width="44" height="4" rx="2" fill="#0f1a30" opacity="0.5"/>
+
+                  <rect x="142" y="170" width="116" height="76" rx="6" fill="#131d35"/>
+                  <text x="200" y="198" font-family="sans-serif" font-size="20" fill="#ff6d00" text-anchor="middle" font-weight="bold" opacity="0.6">98%</text>
+                  <rect x="170" y="210" width="60" height="6" rx="2" fill="#0f1a30"/>
+                  <rect x="178" y="222" width="44" height="4" rx="2" fill="#0f1a30" opacity="0.5"/>
+
+                  <rect x="268" y="170" width="116" height="76" rx="6" fill="#131d35"/>
+                  <text x="326" y="198" font-family="sans-serif" font-size="20" fill="#00e5ff" text-anchor="middle" font-weight="bold" opacity="0.7">24/7</text>
+                  <rect x="296" y="210" width="60" height="6" rx="2" fill="#0f1a30"/>
+                  <rect x="304" y="222" width="44" height="4" rx="2" fill="#0f1a30" opacity="0.5"/>
+                </svg>
+              </div>
+              <div class="project-overlay">
+                <span class="project-overlay-text">View Project</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Velta Fitness</h3>
+              <p class="project-type">Landing Page</p>
+              <p class="project-desc">A high-converting landing page for a fitness startup, designed to drive sign-ups with bold visuals, animated stats, and a clear call-to-action flow.</p>
+              <div class="project-tags">
+                <span class="project-tag">Next.js</span>
+                <span class="project-tag">Framer Motion</span>
+                <span class="project-tag">Vercel</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 — Aruna Kapoor Photography -->
+          <article class="project-card" id="project-3">
+            <div class="project-preview">
+              <div class="project-placeholder-visual">
+                <svg viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Background -->
+                  <rect width="400" height="260" rx="8" fill="#0b1120"/>
+                  <!-- Minimal nav -->
+                  <rect x="16" y="16" width="60" height="10" rx="2" fill="#1a2744"/>
+                  <rect x="290" y="16" width="28" height="8" rx="2" fill="#0f1a30"/>
+                  <rect x="324" y="16" width="28" height="8" rx="2" fill="#0f1a30"/>
+                  <rect x="358" y="16" width="28" height="8" rx="2" fill="#0f1a30"/>
+                  <!-- Masonry photo grid -->
+                  <rect x="16" y="40" width="120" height="90" rx="6" fill="#131d35"/>
+                  <!-- Camera icon in first photo -->
+                  <circle cx="76" cy="75" r="16" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0.3"/>
+                  <circle cx="76" cy="75" r="8" fill="none" stroke="#00e5ff" stroke-width="0.8" opacity="0.2"/>
+                  <circle cx="76" cy="75" r="3" fill="#00e5ff" opacity="0.2"/>
+                  <rect x="60" y="58" width="32" height="4" rx="2" fill="none" stroke="#00e5ff" stroke-width="0.5" opacity="0.2"/>
+
+                  <rect x="142" y="40" width="120" height="56" rx="6" fill="#131d35"/>
+                  <rect x="152" y="50" width="100" height="36" rx="3" fill="#1a2744"/>
+
+                  <rect x="268" y="40" width="116" height="56" rx="6" fill="#131d35"/>
+                  <rect x="278" y="50" width="96" height="36" rx="3" fill="#1a2744"/>
+
+                  <rect x="142" y="102" width="120" height="28" rx="6" fill="#131d35"/>
+
+                  <rect x="268" y="102" width="116" height="28" rx="6" fill="#131d35"/>
+
+                  <rect x="16" y="138" width="120" height="60" rx="6" fill="#131d35"/>
+                  <rect x="26" y="148" width="100" height="40" rx="3" fill="#1a2744"/>
+
+                  <rect x="142" y="138" width="242" height="60" rx="6" fill="#131d35"/>
+                  <rect x="152" y="148" width="222" height="40" rx="3" fill="#1a2744"/>
+                  <!-- About strip -->
+                  <rect x="16" y="208" width="368" height="38" rx="6" fill="#101b30"/>
+                  <circle cx="46" cy="227" r="14" fill="#131d35" stroke="#00e5ff" stroke-width="0.5" opacity="0.3"/>
+                  <rect x="70" y="219" width="100" height="8" rx="2" fill="#1a2744"/>
+                  <rect x="70" y="231" width="160" height="6" rx="2" fill="#0f1a30"/>
+                  <rect x="320" y="219" width="50" height="18" rx="9" fill="#00e5ff" opacity="0.12"/>
+                  <text x="345" y="232" font-family="sans-serif" font-size="7" fill="#00e5ff" text-anchor="middle" opacity="0.7">Contact</text>
+                </svg>
+              </div>
+              <div class="project-overlay">
+                <span class="project-overlay-text">View Project</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Aruna Kapoor Photography</h3>
+              <p class="project-type">Portfolio Website</p>
+              <p class="project-desc">A minimal, image-first portfolio for a freelance photographer with a masonry gallery layout, lightbox viewer, and a clean contact section.</p>
+              <div class="project-tags">
+                <span class="project-tag">HTML / CSS</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Lightbox</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 — NovaPay Dashboard -->
+          <article class="project-card" id="project-4">
+            <div class="project-preview">
+              <div class="project-placeholder-visual">
+                <svg viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Background -->
+                  <rect width="400" height="260" rx="8" fill="#0b1120"/>
+                  <!-- Sidebar -->
+                  <rect x="12" y="12" width="72" height="236" rx="6" fill="#101b30"/>
+                  <circle cx="48" cy="32" r="10" fill="#131d35" stroke="#00e5ff" stroke-width="0.8" opacity="0.4"/>
+                  <text x="48" y="36" font-family="sans-serif" font-size="8" fill="#00e5ff" text-anchor="middle" opacity="0.5">N</text>
+                  <rect x="24" y="56" width="48" height="6" rx="2" fill="#00e5ff" opacity="0.15"/>
+                  <rect x="24" y="72" width="48" height="6" rx="2" fill="#1a2744"/>
+                  <rect x="24" y="88" width="48" height="6" rx="2" fill="#1a2744"/>
+                  <rect x="24" y="104" width="48" height="6" rx="2" fill="#1a2744"/>
+                  <rect x="24" y="120" width="48" height="6" rx="2" fill="#1a2744"/>
+                  <!-- Divider -->
+                  <line x1="24" y1="140" x2="72" y2="140" stroke="#1a2744" stroke-width="0.5"/>
+                  <rect x="24" y="152" width="48" height="6" rx="2" fill="#1a2744"/>
+                  <rect x="24" y="168" width="48" height="6" rx="2" fill="#1a2744"/>
+                  <!-- Top bar -->
+                  <rect x="96" y="12" width="292" height="32" rx="6" fill="#101b30"/>
+                  <rect x="110" y="22" width="100" height="12" rx="6" fill="#131d35"/>
+                  <circle cx="360" cy="28" r="8" fill="#131d35"/>
+                  <!-- Stats row -->
+                  <rect x="96" y="52" width="92" height="52" rx="6" fill="#131d35"/>
+                  <rect x="108" y="62" width="50" height="6" rx="2" fill="#0f1a30"/>
+                  <text x="130" y="88" font-family="sans-serif" font-size="16" fill="#00e5ff" font-weight="bold" opacity="0.7">$12.4k</text>
+
+                  <rect x="196" y="52" width="92" height="52" rx="6" fill="#131d35"/>
+                  <rect x="208" y="62" width="50" height="6" rx="2" fill="#0f1a30"/>
+                  <text x="230" y="88" font-family="sans-serif" font-size="16" fill="#00e5ff" font-weight="bold" opacity="0.6">1,284</text>
+
+                  <rect x="296" y="52" width="92" height="52" rx="6" fill="#131d35"/>
+                  <rect x="308" y="62" width="50" height="6" rx="2" fill="#0f1a30"/>
+                  <text x="342" y="88" font-family="sans-serif" font-size="14" fill="#ff6d00" font-weight="bold" opacity="0.6">+18%</text>
+                  <!-- Chart area -->
+                  <rect x="96" y="112" width="192" height="100" rx="6" fill="#131d35"/>
+                  <!-- Chart grid lines -->
+                  <line x1="110" y1="130" x2="276" y2="130" stroke="#1a2744" stroke-width="0.5"/>
+                  <line x1="110" y1="150" x2="276" y2="150" stroke="#1a2744" stroke-width="0.5"/>
+                  <line x1="110" y1="170" x2="276" y2="170" stroke="#1a2744" stroke-width="0.5"/>
+                  <line x1="110" y1="190" x2="276" y2="190" stroke="#1a2744" stroke-width="0.5"/>
+                  <!-- Chart line -->
+                  <polyline points="118,185 140,175 160,180 180,158 200,145 220,155 240,135 260,128 275,140" fill="none" stroke="#00e5ff" stroke-width="2" opacity="0.7" stroke-linecap="round" stroke-linejoin="round"/>
+                  <!-- Chart area fill -->
+                  <polygon points="118,185 140,175 160,180 180,158 200,145 220,155 240,135 260,128 275,140 275,195 118,195" fill="#00e5ff" opacity="0.06"/>
+                  <!-- Recent transactions -->
+                  <rect x="296" y="112" width="92" height="100" rx="6" fill="#131d35"/>
+                  <rect x="306" y="122" width="50" height="6" rx="2" fill="#1a2744"/>
+                  <rect x="306" y="138" width="72" height="8" rx="2" fill="#0f1a30"/>
+                  <rect x="306" y="152" width="72" height="8" rx="2" fill="#0f1a30"/>
+                  <rect x="306" y="166" width="72" height="8" rx="2" fill="#0f1a30"/>
+                  <rect x="306" y="180" width="72" height="8" rx="2" fill="#0f1a30"/>
+                  <rect x="306" y="194" width="72" height="8" rx="2" fill="#0f1a30"/>
+                  <!-- Bottom row -->
+                  <rect x="96" y="220" width="292" height="28" rx="6" fill="#101b30"/>
+                  <rect x="110" y="230" width="60" height="8" rx="3" fill="#1a2744"/>
+                  <rect x="180" y="230" width="40" height="8" rx="3" fill="#00e5ff" opacity="0.1"/>
+                  <rect x="230" y="230" width="40" height="8" rx="3" fill="#1a2744"/>
+                </svg>
+              </div>
+              <div class="project-overlay">
+                <span class="project-overlay-text">View Project</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">NovaPay Dashboard</h3>
+              <p class="project-type">Custom Web Application</p>
+              <p class="project-desc">A responsive fintech dashboard with real-time analytics, transaction history, and revenue charts — built for clarity and speed on any screen size.</p>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Chart.js</span>
+                <span class="project-tag">REST API</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual">
+            <div class="about-graphic">
+              <svg viewBox="0 0 400 400" fill="none">
+                <defs>
+                  <radialGradient id="about-glow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.15"/>
+                    <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                <circle cx="200" cy="200" r="180" fill="url(#about-glow)"/>
+                <circle cx="200" cy="200" r="120" stroke="#00e5ff" stroke-width="0.5" fill="none" opacity="0.3"/>
+                <circle cx="200" cy="200" r="80" stroke="#00e5ff" stroke-width="0.5" fill="none" opacity="0.2"/>
+                <circle cx="200" cy="200" r="40" stroke="#00e5ff" stroke-width="0.5" fill="none" opacity="0.1"/>
+                <!-- Nodes -->
+                <circle cx="200" cy="80" r="6" fill="#00e5ff" opacity="0.8"/>
+                <circle cx="296" cy="144" r="4" fill="#ff6d00" opacity="0.6"/>
+                <circle cx="296" cy="256" r="5" fill="#00e5ff" opacity="0.5"/>
+                <circle cx="200" cy="320" r="4" fill="#00e5ff" opacity="0.4"/>
+                <circle cx="104" cy="256" r="6" fill="#ff6d00" opacity="0.5"/>
+                <circle cx="104" cy="144" r="4" fill="#00e5ff" opacity="0.6"/>
+                <!-- Connection lines -->
+                <line x1="200" y1="80" x2="296" y2="144" stroke="#00e5ff" stroke-width="0.5" opacity="0.2"/>
+                <line x1="296" y1="144" x2="296" y2="256" stroke="#00e5ff" stroke-width="0.5" opacity="0.2"/>
+                <line x1="296" y1="256" x2="200" y2="320" stroke="#00e5ff" stroke-width="0.5" opacity="0.2"/>
+                <line x1="200" y1="320" x2="104" y2="256" stroke="#00e5ff" stroke-width="0.5" opacity="0.2"/>
+                <line x1="104" y1="256" x2="104" y2="144" stroke="#00e5ff" stroke-width="0.5" opacity="0.2"/>
+                <line x1="104" y1="144" x2="200" y2="80" stroke="#00e5ff" stroke-width="0.5" opacity="0.2"/>
+                <!-- Center logo -->
+                <text x="200" y="210" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="48" fill="#00e5ff" opacity="0.6">108</text>
+              </svg>
+            </div>
+          </div>
+          <div class="about-text">
+            <span class="section-tag">Who we are</span>
+            <h2 class="section-title">About 108</h2>
+            <p class="about-lead">108 is a freelance web development service focused on building websites that work — for you and your audience.</p>
+            <p>We specialize in tailored design, responsive layouts, and functional websites that help clients establish a professional online presence. Every project starts with understanding your goals and ends with a site you're proud to share.</p>
+            <p>From clean UI/UX to fast performance, we focus on practical web solutions that serve real needs. No unnecessary complexity — just well-built websites that represent your brand and connect with your audience.</p>
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </span>
+                <span class="stat-label">Responsive Design</span>
+              </div>
+              <div class="stat">
+                <span class="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </span>
+                <span class="stat-label">Fast Performance</span>
+              </div>
+              <div class="stat">
+                <span class="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </span>
+                <span class="stat-label">Clean Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get in touch</span>
+          <h2 class="section-title">Let's Build Something</h2>
+          <p class="section-subtitle">Have a project in mind? Reach out and let's get started.</p>
+        </div>
+        <div class="contact-grid">
+          <a href="mailto:mdsaad030505@gmail.com" class="contact-card" id="contact-email-1" aria-label="Email mdsaad030505@gmail.com">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="M22 4L12 13 2 4"/>
+              </svg>
+            </div>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">mdsaad030505@gmail.com</span>
+          </a>
+          <a href="mailto:adithyaramesh0469@gmail.com" class="contact-card" id="contact-email-2" aria-label="Email adithyaramesh0469@gmail.com">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="M22 4L12 13 2 4"/>
+              </svg>
+            </div>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">adithyaramesh0469@gmail.com</span>
+          </a>
+          <a href="tel:+919176084833" class="contact-card" id="contact-phone" aria-label="Call +91 9176084833">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+            </div>
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">+91 9176084833</span>
+          </a>
+          <a href="https://www.linkedin.com/in/mohammed-saad-c-b7baa8254/" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-linkedin" aria-label="LinkedIn profile">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </div>
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">Mohammed Saad C</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" id="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="footer-logo" viewBox="0 0 120 40" aria-hidden="true">
+          <text x="60" y="32" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="36" fill="#00e5ff">108</text>
+        </svg>
+        <p class="footer-slogan">Need a website in a hurry? We'll build it.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigate</h4>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact</h4>
+          <ul>
+            <li><a href="mailto:mdsaad030505@gmail.com">mdsaad030505@gmail.com</a></li>
+            <li><a href="mailto:adithyaramesh0469@gmail.com">adithyaramesh0469@gmail.com</a></li>
+            <li><a href="tel:+919176084833">+91 9176084833</a></li>
+            <li><a href="https://www.linkedin.com/in/mohammed-saad-c-b7baa8254/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 108. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
